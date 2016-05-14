@@ -1,0 +1,5 @@
+power2 <- read.csv("Y:/personal/personal/Work/teaching/Data Science/Coursera/household_power_consumption.txt", sep=";", quote="", stringsAsFactors=FALSE)
+power1<-subset(power2, Date=="1/2/2007")
+power2<-subset(power2, Date=="2/2/2007")
+powerc<-rbind(power1, power2)
+hist(as.numeric(powerc$Global_active_power), col="red", main="Global Active Power", xlab="Global Active Power(kilowatts)")
